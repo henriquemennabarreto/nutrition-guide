@@ -1,0 +1,7 @@
+{
+  "name": "guia-nutricional-ui",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
