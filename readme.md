@@ -39,13 +39,13 @@ O aplicativo oferece autenticação via Google.
 ### Tela 2 - Perfil do Usuário
 Nesta tela, os usuários fornecem informações pessoais para que o aplicativo possa gerar uma dieta personalizada conforme o objetivo. As informações incluem:
 
-- Nome;
-- Foto de Perfil;
-- Peso;
-- Altura;
-- Gênero;
-- Objetivo;
-- Restrições Alimentares;
+- Nome.
+- Foto de Perfil.
+- Peso.
+- Altura.
+- Gênero.
+- Objetivo.
+- Restrições Alimentares.
 
 ### Tela 3 - Resultado do Plano
 Após o usuário fornecer as informações do perfil, o aplicativo gera uma recomendação de dieta personalizada com base nos dados fornecidos. O usuário pode visualizar as informações da dieta nesta tela.
