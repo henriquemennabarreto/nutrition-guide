@@ -1,16 +1,29 @@
+:host {
+    display: block;
+    margin-right: 20px;
+    width: 42px;
+    height: 42px;
+}
+
+app-user-avatar {
+    width: 42px;
+    height: 42px;
+    display: block;
+    margin: 0 auto;
+}
+
 .dropdown-container {
     position: relative;
-    display: inline-block;  // or whatever suits your layout
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .dropdown-menu {
     display: block;
     position: absolute;
-    top: 100%; // position it below the avatar
-    right: 0;  // align it to the right side
-    z-index: 1000;  // to ensure it's on top
-    
-    // Styling for the dropdown
+    top: 100%;
+    right: 0;
+    z-index: 1000;
     background-color: #fff;
     border: 1px solid #ddd;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);

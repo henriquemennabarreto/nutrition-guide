@@ -6,6 +6,8 @@ import { UserService } from './services/user.service';
 import { PlanoService } from './services/plano.service';
 import { UserDropdownComponent } from './components/user-dropdown/user-dropdown.component';
 import { UserDropdownMenuComponent } from './components/user-dropdown-menu/user-dropdown-menu.component';
+import { ImageOptionsComponent } from './components/image-options/image-options.component';
+import { UserProfilePictureComponent } from './components/user-profile-picture/user-profile-picture.component';
 
 @NgModule({
   imports: [
@@ -15,7 +17,9 @@ import { UserDropdownMenuComponent } from './components/user-dropdown-menu/user-
   declarations: [
     UserAvatarComponent,
     UserDropdownComponent,
-    UserDropdownMenuComponent
+    UserDropdownMenuComponent,
+    ImageOptionsComponent,
+    UserProfilePictureComponent,
   ],
   providers: [
     UserService,
@@ -24,7 +28,9 @@ import { UserDropdownMenuComponent } from './components/user-dropdown-menu/user-
   exports: [
     UserAvatarComponent,
     UserDropdownComponent,
-    UserDropdownMenuComponent
+    UserDropdownMenuComponent,
+    ImageOptionsComponent,
+    UserProfilePictureComponent,
   ]
 })
 export class SharedModule {}

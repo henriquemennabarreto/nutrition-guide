@@ -1,0 +1,41 @@
+.resultado-container {
+    width: 640px;
+    max-width: 100%;
+    padding: 2rem 20px 4rem;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+}
+
+h2 ion-icon {
+    margin-right: 0.5rem;
+    color: #3880ff;  /* Color of the icon, can be changed based on preference */
+    font-size: 24px;
+}
+
+.dicas {
+    background: url('/assets/img/backdrop-01.jpg') no-repeat center;
+    background-size: cover;
+    padding: 2rem;
+    border-radius: 15px;
+    position: relative;
+    margin-top: 2rem;
+}
+
+.dicas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 0;
+}
+
+ul {
+    position: relative;
+    z-index: 1;
+}

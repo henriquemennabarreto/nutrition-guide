@@ -1,5 +1,5 @@
 import { ActionReducer, MetaReducer, State, createReducer, on } from '@ngrx/store';
-import { setUser, setPerfilUsuario, setResultado, logoutUser } from './app.actions';
+import { setUser, setPerfilUsuario, setResultado, logoutUser, setProfilePicture } from './app.actions';
 import { environment } from 'src/environments/environment';
 import { localStorageSync } from 'ngrx-store-localstorage';
 
@@ -54,6 +54,7 @@ export const appReducer = createReducer(
     on(setUser, (state, { user }) => ({ ...state, user })),
     on(logoutUser, state => ({ ...state, user: initialState.user })),
     on(setPerfilUsuario, (state, { perfilUsuario }) => ({ ...state, perfilUsuario })),
+    on(setProfilePicture, (state, { profilePicture }) => ({ ...state, user: { ...state.user, profilePicture: profilePicture }})),
     on(setResultado, (state, { resultado }) => ({ ...state, resultado }))
 );
 

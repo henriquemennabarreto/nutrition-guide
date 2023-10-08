@@ -1,11 +1,12 @@
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PerfilUsuarioPage } from './perfil-usuario.page';
 
 import { PerfilUsuarioPageRoutingModule } from './perfil-usuario-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   imports: [
@@ -13,7 +14,9 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     FormsModule,
     PerfilUsuarioPageRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
+    FlexLayoutModule
   ],
   declarations: [PerfilUsuarioPage]
 })

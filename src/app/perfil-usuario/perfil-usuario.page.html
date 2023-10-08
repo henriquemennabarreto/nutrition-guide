@@ -8,9 +8,70 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Seu Perfil</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="form-container">
+    <form
+      [formGroup]="profileForm"
+      (submit)="onSubmit()"
+      fxLayout="column"
+      fxLayoutAlign="start wrap"
+      fxLayoutGap="2rem">
+      
+      <app-user-profile-picture (imageChanged)="onImageChanged($event)"></app-user-profile-picture>
+      
+      <ion-list>
+        <ion-item>
+          <ion-label position="floating">Nome</ion-label>
+          <ion-input formControlName="nome"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label position="floating">Idade</ion-label>
+          <ion-input formControlName="idade"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label position="floating">Altura (cm)</ion-label>
+          <ion-input formControlName="altura"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label position="floating">Peso (kg)</ion-label>
+          <ion-input formControlName="peso"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label>Gênero</ion-label>
+          <ion-select formControlName="genero">
+            <ion-select-option value="male">Masculino</ion-select-option>
+            <ion-select-option value="female">Feminino</ion-select-option>
+            <ion-select-option value="nao-binario">Não binário</ion-select-option>
+            <ion-select-option value="prefiro-nao-dizer">Prefiro não dizer</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+      
+      <h3 class="objetivo-label">Selecione o seu objetivo:</h3>
+
+      <div fxLayout="row" fxLayoutGap=".5rem" class="objectives-container">
+        <ion-card 
+          fxFlex="48%"
+          *ngFor="let obj of objetivos"
+          (click)="selectObjective(obj)"
+          [ngClass]="{ 'selected': selectedObjective === obj, 'objetivo-ganho': obj.value == 'massGain', 'objetivo-emagrecimento': obj.value == 'weightLoss' }">
+          <div class="card-overlay"></div>
+          <ion-card-content>
+            <ion-text [color]="selectedObjective === obj ? 'primary' : 'dark'">
+              {{ obj.label }}
+            </ion-text>
+          </ion-card-content>
+        </ion-card>
+      </div>
+      
+  
+      <ion-button expand="full" type="submit">
+        <ion-icon slot="start" name="checkmark-outline"></ion-icon>
+        Salvar
+      </ion-button>
+    </form>
+  </div>
 </ion-content>

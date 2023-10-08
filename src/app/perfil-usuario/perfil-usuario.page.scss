@@ -1,0 +1,76 @@
+ion-toolbar {
+    align-items: center;
+}
+
+.form-container {
+    width: 640px;
+    max-width: 100%;
+    padding: 2rem 20px 4rem;
+}
+
+app-user-profile-picture {
+    width: 200px;
+    height: 200px;
+    max-width: 100%;
+    margin: 0 auto 4rem auto;
+    display: block;
+}
+
+ion-list {
+    width: 100%;
+}
+
+ion-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    height: 120px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+
+    &.objetivo-emagrecimento {
+        background-image: url('/assets/img/backdrop-01.jpg');
+    }
+    
+    &.objetivo-ganho {
+        background-image: url('/assets/img/backdrop-02.jpg');
+    }
+}
+
+
+ion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+ion-card.selected {
+    border: 2px solid var(--ion-color-primary);
+}
+
+ion-card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+
+    ion-text {
+        font-weight: bold;
+    }
+}
+
+.objetivo-label {
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+.card-overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.85);
+}
