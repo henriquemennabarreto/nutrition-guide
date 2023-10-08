@@ -37,7 +37,7 @@ Para desenvolver o projeto localmente, siga os passos abaixo:
 O aplicativo oferece autenticação via Google.
 
 ### Tela 2 - Perfil do Usuário
-Nesta tela, os usuários fornecem informações pessoais para que o aplicativo possa gerar uma dieta personalizada. As informações incluem:
+Nesta tela, os usuários fornecem informações pessoais para que o aplicativo possa gerar uma dieta personalizada conforme o objetivo. As informações incluem:
 
 - Nome;
 - Foto de Perfil;
