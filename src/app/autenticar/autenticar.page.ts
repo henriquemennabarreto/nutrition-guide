@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { GoogleAuth } from '@codetrix-studio/capacitor-google-auth';
 import { Store } from '@ngrx/store';
+import { IAppState } from '../store/app.reducer';
+import * as Actions from '../store/app.actions';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-autenticar',
@@ -10,14 +14,21 @@ import { Store } from '@ngrx/store';
 export class AutenticarPage {
 
   constructor(
-    private store: Store
+    private store: Store<IAppState>,
+    private router: Router
   ) {}
 
   async loginWithGoogle() {
     let gUser = await GoogleAuth.signIn();
-    console.log(gUser)
     if(gUser?.email && gUser?.authentication?.accessToken) {
-      // this.store.dispatch(AppActions.getGoogleJwt({ email: gUser.email }));
+      let user = {
+        name: gUser.name,
+        email: gUser.email,
+        accessToken: gUser.authentication.accessToken,
+        profilePicture: gUser.imageUrl
+      };
+      this.store.dispatch(Actions.setUser({ user }));
+      this.router.navigate(['/tabs/perfil-usuario']);
     }
   }
 }

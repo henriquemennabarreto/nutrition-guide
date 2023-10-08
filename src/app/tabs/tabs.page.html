@@ -1,18 +1,13 @@
 <ion-tabs>
 
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="autenticar" href="/tabs/autenticar">
-      <ion-icon aria-hidden="true" name="triangle"></ion-icon>
-      <ion-label>Primeiros Passos</ion-label>
-    </ion-tab-button>
-
+  <ion-tab-bar slot="bottom" *ngIf="(user$ | async)?.accessToken">
     <ion-tab-button tab="perfil-usuario" href="/tabs/perfil-usuario">
-      <ion-icon aria-hidden="true" name="ellipse"></ion-icon>
+      <ion-icon aria-hidden="true" name="person-outline"></ion-icon>
       <ion-label>Seu Perfil</ion-label>
     </ion-tab-button>
 
     <ion-tab-button tab="visualizar-resultado" href="/tabs/visualizar-resultado">
-      <ion-icon aria-hidden="true" name="square"></ion-icon>
+      <ion-icon aria-hidden="true" name="restaurant-outline"></ion-icon>
       <ion-label>Seu Plano</ion-label>
     </ion-tab-button>
   </ion-tab-bar>

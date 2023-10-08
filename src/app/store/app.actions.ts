@@ -1,7 +1,9 @@
 import { createAction, props } from '@ngrx/store';
+import { IUser } from './app.reducer';
 
 // User actions
-export const setUser = createAction('[App] Set User', props<{ user: { name: string, firstName: string, lastName: string, accessToken: string, email: string } }>());
+export const setUser = createAction('[App] Set User', props<{ user: IUser }>());
+export const logoutUser = createAction('[App] Logout User');
 
 // PerfilUsuario actions
 export const setPerfilUsuario = createAction('[App] Set PerfilUsuario', props<{ perfilUsuario: { genero: string, idade: number, altura: number, objetivo: string } }>());

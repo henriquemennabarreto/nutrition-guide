@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { AppEffects } from './store/app.effects';
-import { appReducer } from './store/app.reducer';
+import { appReducer, metaReducers } from './store/app.reducer';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -20,7 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    StoreModule.forRoot({ app: appReducer }),
+    StoreModule.forRoot({ app: appReducer }, { metaReducers }),
     EffectsModule.forRoot([AppEffects]),
     HttpClientModule
   ],

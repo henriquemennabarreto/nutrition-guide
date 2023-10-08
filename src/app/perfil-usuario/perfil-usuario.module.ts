@@ -3,17 +3,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PerfilUsuarioPage } from './perfil-usuario.page';
-import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { PerfilUsuarioPageRoutingModule } from './perfil-usuario-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    ExploreContainerComponentModule,
-    PerfilUsuarioPageRoutingModule
+    PerfilUsuarioPageRoutingModule,
+    SharedModule
   ],
   declarations: [PerfilUsuarioPage]
 })

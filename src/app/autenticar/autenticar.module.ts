@@ -3,19 +3,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AutenticarPage } from './autenticar.page';
-import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
-
 import { AutenticarPageRoutingModule } from './autenticar-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    ExploreContainerComponentModule,
     AutenticarPageRoutingModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    SharedModule
   ],
   declarations: [AutenticarPage]
 })
