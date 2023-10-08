@@ -12,7 +12,7 @@ No futuro, o aplicativo incluirá um dashboard com gráficos de evolução do us
 - npm >= 6.0.0
 - Ionic CLI (Certifique-se de instalá-lo globalmente com `npm install -g @ionic/cli`)
 
-## Desenvolvimento Local
+### Desenvolvimento Local
 
 Para desenvolver o projeto localmente, siga os passos abaixo:
 
@@ -31,12 +31,12 @@ Para desenvolver o projeto localmente, siga os passos abaixo:
    ```bash
    npm start
 
-# Telas do Aplicativo
+## Telas do Aplicativo
 
-## Tela 1 - Login via Google (Autenticação)
+### Tela 1 - Login via Google (Autenticação)
 O aplicativo oferece autenticação via Google.
 
-## Tela 2 - Perfil do Usuário
+### Tela 2 - Perfil do Usuário
 Nesta tela, os usuários fornecem informações pessoais para que o aplicativo possa gerar uma dieta personalizada. As informações incluem:
 
 - Nome;
@@ -47,23 +47,23 @@ Nesta tela, os usuários fornecem informações pessoais para que o aplicativo p
 - Objetivo;
 - Restrições Alimentares;
 
-## Tela 3 - Resultado do Plano
+### Tela 3 - Resultado do Plano
 Após o usuário fornecer as informações do perfil, o aplicativo gera uma recomendação de dieta personalizada com base nos dados fornecidos. O usuário pode visualizar as informações da dieta nesta tela.
 
-# Requisições (API)
+## Requisições (API)
 
-##Autenticação
+### Autenticação
 - Solicitação para fazer login com uma conta do Google.
 
-## Perfil de Usuário
+### Perfil de Usuário
 - Listar todos os usuários.
 - Obter um usuário específico pelo ID.
 - Adicionar um novo usuário.
 - Atualizar um usuário específico pelo ID.
 - Deletar um usuário específico pelo ID.
 
-## Resultado Dieta
+### Resultado Dieta
 - Obter a dieta recomendada para um usuário específico com base em seu perfil.
 
-# Executando o Aplicativo em um Dispositivo Físico ou Emulador
+## Executando o Aplicativo em um Dispositivo Físico ou Emulador
 Para executar o aplicativo em um dispositivo físico ou emulador, consulte a documentação oficial do Ionic: https://ionicframework.com/docs/developing/running
