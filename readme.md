@@ -12,7 +12,7 @@ No futuro, o aplicativo incluirá um dashboard com gráficos de evolução do us
 - npm >= 6.0.0
 - Ionic CLI (Certifique-se de instalá-lo globalmente com `npm install -g @ionic/cli`)
 
-### Desenvolvimento Local
+## Desenvolvimento Local
 
 Para desenvolver o projeto localmente, siga os passos abaixo:
 
