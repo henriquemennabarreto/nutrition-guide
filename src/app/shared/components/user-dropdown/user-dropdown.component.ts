@@ -27,9 +27,4 @@ export class UserDropdownComponent {
   onAvatarClick(ev: any) {
     this.presentPopover(ev);
   }
-
-  onLogout() {
-    this.popoverCtrl.dismiss();
-    this.logout.emit();
-  }
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { logoutUser } from 'src/app/store/app.actions';
 
@@ -9,9 +10,10 @@ import { logoutUser } from 'src/app/store/app.actions';
 })
 export class UserDropdownMenuComponent {
 
-  constructor(private store: Store) {}
+  constructor(private store: Store, private router: Router) {}
 
   onLogout() {
     this.store.dispatch(logoutUser());
+    this.router.navigate(['/tabs/autenticar']);
   }
 }

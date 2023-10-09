@@ -22,7 +22,6 @@ export class UserAvatarComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.userSubscription = this.store.pipe(select(Selectors.selectUser))
       .subscribe((user: IUser) => {
-        console.log(user);
         this.profilePicture = user?.profilePicture || null;
       });
   }
